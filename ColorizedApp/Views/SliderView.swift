@@ -23,7 +23,7 @@ struct SliderView: View {
             Slider(value: $sliderValue, in: 0...255, step: 1)
                 .accentColor(accentColor)
             
-            TextField("", text: $textFieldValue)
+            TextField("0", text: $textFieldValue)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .frame(width: 50)
                 .padding(15)

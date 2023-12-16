@@ -40,8 +40,7 @@ struct ContentView: View {
                 ExtractedView(currentColor: $currentColor)
                 
                 ForEach (0..<sliderValues.count, id: \.self) { index in
-                    SliderView(
-                        sliderValue: $sliderValues[index],
+                    SliderView(sliderValue: $sliderValues[index],
                         textFieldValue: $textFieldValues[index],
                         accentColor: accentColors[index]
                     )
@@ -90,7 +89,6 @@ struct ContentView: View {
         }
         textFieldValues = sliderValues.map { "\(Int($0))" }
     }
-
 }
 
 #Preview {
