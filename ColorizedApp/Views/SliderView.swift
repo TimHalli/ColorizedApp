@@ -22,9 +22,6 @@ struct SliderView: View {
             
             Slider(value: $sliderValue, in: 0...255, step: 1)
                 .accentColor(accentColor)
-                .onChange(of: sliderValue) { newValue, _ in
-                    textFieldValue = "\(Int(newValue))"
-                }
             
             TextField("", text: $textFieldValue)
                 .textFieldStyle(RoundedBorderTextFieldStyle())

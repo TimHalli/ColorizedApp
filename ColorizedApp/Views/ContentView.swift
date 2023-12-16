@@ -45,6 +45,10 @@ struct ContentView: View {
                         textFieldValue: $textFieldValues[index],
                         accentColor: accentColors[index]
                     )
+                    .onChange(of: sliderValues[index]) { newValue, _ in
+                        textFieldValues[index] = "\(Int(newValue))"
+                        updateColor()
+                    }
                 }
                 Spacer()
             }
@@ -54,6 +58,7 @@ struct ContentView: View {
                     Spacer()
                     Button("Done") {
                         applyChanges()
+                        updateColor()
                     }
                 }
             }
