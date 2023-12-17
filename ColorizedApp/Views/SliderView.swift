@@ -18,7 +18,8 @@ struct SliderView: View {
             Text("\(Int(sliderValue))")
                 .bold()
                 .foregroundColor(.white)
-                .padding(15)
+                .padding(5)
+                .frame(width: 50)
             
             Slider(value: $sliderValue, in: 0...255, step: 1)
                 .accentColor(accentColor)
